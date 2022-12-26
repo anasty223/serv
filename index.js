@@ -6,13 +6,13 @@ const cors = require("cors");
 app.use(cors());
 app.use(express.json());
 
-const server = app.listen("https://serv-gamma.vercel.app/", () => {
-  console.log("Server Running on Port 3002...");
+const server = app.listen("5000", () => {
+  console.log("Server Running on Port 5000...");
 });
 
 io = socket(server, {
     cors:{
-        origin: 'https://serv-gamma.vercel.app/',
+        origin: 'http://localhost:5000/',
         methods: ['GET','POST','DELETE','UPDATE','PUT','PATCH'],
         allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With', 'Accept', 'Origin', 'Access-Control-Allow-Origin', 'Access-Control-Allow-Headers', 'Access-Control-Allow-Methods', 'Access-Control-Allow-Credentials'],
         withCredentials: true
