@@ -6,7 +6,7 @@ const cors = require("cors");
 app.use(cors());
 app.use(express.json());
 
-const server = app.listen("3002", () => {
+const server = app.listen("https://serv-gamma.vercel.app/", () => {
   console.log("Server Running on Port 3002...");
 });
 
